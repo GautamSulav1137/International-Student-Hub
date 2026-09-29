@@ -1,0 +1,290 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>K-Campus | International Student Hub</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+<div class="logo">K-Campus<span>.</span></div>
+
+<div class="nav-links">
+<a href="#home">Home</a>
+<a href="#korean">Korean Helper</a>
+<a href="#deadlines">Deadlines</a>
+<a href="#assistant">AI Assistant</a>
+</div>
+
+<button class="login-btn">Login</button>
+</nav>
+
+
+<main>
+
+<!-- HERO -->
+<section id="home" class="hero">
+
+<div class="hero-text">
+<p class="small-title">YOUR CAMPUS COMPANION</p>
+
+<h1>
+University life in Korea,
+<span>made easier.</span>
+</h1>
+
+<p class="hero-description">
+A simple platform designed to help international
+students understand campus life, Korean phrases,
+and important deadlines.
+</p>
+
+<div class="hero-buttons">
+<a href="#korean" class="primary-btn">
+Explore Korean Helper
+</a>
+
+<a href="#deadlines" class="secondary-btn">
+View Deadlines
+</a>
+</div>
+</div>
+
+<div class="dashboard-card">
+
+<div class="card-header">
+<span>My Dashboard</span>
+<span class="status">● Active</span>
+</div>
+
+<div class="mini-card">
+<div class="icon">🇰🇷</div>
+<div>
+<small>Korean Helper</small>
+<strong>5 useful phrases</strong>
+</div>
+</div>
+
+<div class="mini-card">
+<div class="icon">📅</div>
+<div>
+<small>Next Deadline</small>
+<strong>Assignment · Oct 5</strong>
+</div>
+</div>
+
+<div class="mini-card">
+<div class="icon">🤖</div>
+<div>
+<small>AI Assistant</small>
+<strong>Ready to help</strong>
+</div>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FEATURES -->
+<section class="features">
+
+<div class="section-heading">
+<p>WHAT WE OFFER</p>
+<h2>Everything you need in one place.</h2>
+</div>
+
+<div class="feature-grid">
+
+<div class="feature-card">
+<div class="feature-icon">🇰🇷</div>
+<h3>Korean Helper</h3>
+<p>
+Find useful Korean expressions for
+university and everyday situations.
+</p>
+<a href="#korean">Try it →</a>
+</div>
+
+<div class="feature-card">
+<div class="feature-icon">📅</div>
+<h3>Deadline Tracker</h3>
+<p>
+Keep your assignments, exams and
+important dates organized.
+</p>
+<a href="#deadlines">View deadlines →</a>
+</div>
+
+<div class="feature-card">
+<div class="feature-icon">🤖</div>
+<h3>AI Assistant</h3>
+<p>
+Ask questions about university life
+and get simple answers.
+</p>
+<a href="#assistant">Ask a question →</a>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- KOREAN HELPER -->
+<section id="korean" class="section">
+
+<div class="section-heading">
+<p>KOREAN HELPER</p>
+<h2>Useful Korean for real situations.</h2>
+</div>
+
+<div class="korean-box">
+
+<div class="category-buttons">
+<button onclick="showPhrase('university')">
+🎓 University
+</button>
+
+<button onclick="showPhrase('restaurant')">
+🍜 Restaurant
+</button>
+
+<button onclick="showPhrase('hospital')">
+🏥 Hospital
+</button>
+
+<button onclick="showPhrase('work')">
+💼 Work
+</button>
+</div>
+
+<div class="phrase-card">
+
+<p class="label">KOREAN PHRASE</p>
+
+<h2 id="koreanText">
+교수님, 질문이 있습니다.
+</h2>
+
+<p id="englishText">
+Professor, I have a question.
+</p>
+
+<button
+class="copy-btn"
+onclick="copyPhrase()">
+📋 Copy Korean
+</button>
+
+<p id="copyMessage"></p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- DEADLINES -->
+<section id="deadlines" class="section gray-section">
+
+<div class="section-heading">
+<p>DEADLINE TRACKER</p>
+<h2>Stay ahead of your deadlines.</h2>
+</div>
+
+<div class="deadline-container">
+
+<div class="add-deadline">
+
+<input
+type="text"
+id="taskInput"
+placeholder="Enter assignment or task">
+
+<input
+type="date"
+id="dateInput">
+
+<button onclick="addDeadline()">
+Add Deadline
+</button>
+
+</div>
+
+<div id="deadlineList">
+
+<div class="deadline-item">
+<div>
+<strong>Database Assignment</strong>
+<small>October 5, 2026</small>
+</div>
+
+<button onclick="completeTask(this)">
+✓
+</button>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- AI ASSISTANT -->
+<section id="assistant" class="section">
+
+<div class="section-heading">
+<p>AI ASSISTANT</p>
+<h2>Have a question?</h2>
+</div>
+
+<div class="chat-box">
+
+<div id="chatMessages" class="chat-messages">
+
+<div class="bot-message">
+👋 Hi! I'm K-Campus Assistant.
+Ask me something about university life.
+</div>
+
+</div>
+
+<div class="chat-input">
+
+<input
+type="text"
+id="questionInput"
+placeholder="Ask something...">
+
+<button onclick="askQuestion()">
+Send
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+
+<footer>
+<div class="logo">K-Campus<span>.</span></div>
+<p>Making university life in Korea easier for international students.</p>
+<p class="copyright">© 2026 K-Campus</p>
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
